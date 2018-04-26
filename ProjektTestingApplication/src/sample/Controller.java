@@ -22,6 +22,10 @@ public class Controller {
     public CheckBox checkD;
     public Label lblCHECK;
     public Button btnSUBMIT;
+    public RadioButton radioA;
+    public RadioButton radioB;
+    public RadioButton radioC;
+    public RadioButton radioD;
 
 
     public void clickLogin(ActionEvent event) {
@@ -50,11 +54,26 @@ public class Controller {
     }
 
     public void Checkbox(ActionEvent event) {
-
-        boolean a = checkA.isSelected();
-        boolean b = checkB.isSelected();
-        boolean c = checkC.isSelected();
-        boolean d = checkD.isSelected();
+        if(event.getSource() == checkA){
+            checkB.setSelected(false);
+            checkC.setSelected(false);
+            checkD.setSelected(false);
+        }
+        else if(event.getSource() == checkB){
+            checkC.setSelected(false);
+            checkD.setSelected(false);
+            checkA.setSelected(false);
+        }
+        else if(event.getSource() == checkC){
+            checkB.setSelected(false);
+            checkA.setSelected(false);
+            checkD.setSelected(false);
+        }
+        else if(event.getSource() == checkD){
+            checkA.setSelected(false);
+            checkB.setSelected(false);
+            checkC.setSelected(false);
+        }
 
     }
 
