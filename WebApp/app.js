@@ -1,16 +1,20 @@
+
+//Environment variables
+require('dotenv').config();
+
 //Essential requirments
 const express = require('express');
 const app = express();
 
 //DB connection
-const mysql = require('mysql');
+const db = require('./api/models/db');
 
 //Extension packages
 const exphbs = require('express-handlebars');
 const path = require('path');
 
 //Port
-const port = process.env.PORT || 5000;
+ const port = process.env.PORT || 5000;
 
 //App
 //Routes
