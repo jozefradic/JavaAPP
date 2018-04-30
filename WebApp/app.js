@@ -12,6 +12,11 @@ const db = require('./api/models/db');
 //Extension packages
 const exphbs = require('express-handlebars');
 const path = require('path');
+const bodyParser = require('body-parser');
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json()); 
 
 //Port
  const port = process.env.PORT || 5000;
@@ -19,12 +24,14 @@ const path = require('path');
 //App
 //Routes
 const index = require('./api/routes/index');
+const registerStudent = require('./api/routes/registerStudent');
 //const teacher = require('./api/routes/teacher');
 //const student = require('./api/routes/student');
 
 app.use('/',index);
+app.use('/registerStudent', registerStudent);
 //app.use('/regteacher', teacher);
-//app.use('/regstudent', student);
+
 
 //view engine
 app.engine('handlebars',exphbs({defaultLayout: 'main'}));
