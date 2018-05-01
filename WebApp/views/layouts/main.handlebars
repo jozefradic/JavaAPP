@@ -13,7 +13,20 @@
 <body>
     <a href="/registerStudent">Register as student</a>
     <a href="/">Log in</a>
+    <a href="/logout">Log Out</a>
     
+{{#if error_msg}}
+        <div class="alert alert-danger">{{error_msg}}</div>
+      {{/if}}
+      {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/if}}
+      {{#if errors}}
+        {{#each errors}}
+          <div class="alert alert-danger">{{msg}}</div>
+        {{/each}}
+{{/if}}
+
 {{{body}}}    
 </body>
 </html>
