@@ -16,10 +16,6 @@ public class Controller {
     public Label lblError;
     public Button btnLogout;
     public Button btnTests;
-    public CheckBox checkA;
-    public CheckBox checkB;
-    public CheckBox checkC;
-    public CheckBox checkD;
     public Label lblCHECK;
     public Button btnSUBMIT;
     public RadioButton radioA;
@@ -39,7 +35,10 @@ public class Controller {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
                 Parent root = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
+                stage.setResizable(false);
                 stage.setScene(new Scene(root));
+
+                //stage.getStylesheets().add("path/stylesheet.css");
                 stage.setTitle("Main");
                 stage.show();
                 stage.setMaximized(true);
@@ -54,25 +53,43 @@ public class Controller {
     }
 
     public void Checkbox(ActionEvent event) {
-        if(event.getSource() == checkA){
-            checkB.setSelected(false);
-            checkC.setSelected(false);
-            checkD.setSelected(false);
+
+        if(event.getSource() == radioA){
+            radioB.setSelected(false);
+            radioC.setSelected(false);
+            radioD.setSelected(false);
+            btnSUBMIT.setDisable(false);
         }
-        else if(event.getSource() == checkB){
-            checkC.setSelected(false);
-            checkD.setSelected(false);
-            checkA.setSelected(false);
+
+        else if(event.getSource() == radioB){
+            radioC.setSelected(false);
+            radioA.setSelected(false);
+            radioD.setSelected(false);
+            btnSUBMIT.setDisable(false);
         }
-        else if(event.getSource() == checkC){
-            checkB.setSelected(false);
-            checkA.setSelected(false);
-            checkD.setSelected(false);
+
+        else if(event.getSource() == radioC){
+            radioA.setSelected(false);
+            radioB.setSelected(false);
+            radioD.setSelected(false);
+            btnSUBMIT.setDisable(false);
         }
-        else if(event.getSource() == checkD){
-            checkA.setSelected(false);
-            checkB.setSelected(false);
-            checkC.setSelected(false);
+
+        else if(event.getSource() == radioD){
+            radioB.setSelected(false);
+            radioC.setSelected(false);
+            radioA.setSelected(false);
+            btnSUBMIT.setDisable(false);
+        }
+
+    }
+
+    public void btnSUBMIT(ActionEvent event){
+        try {
+            Stage primarystage = (Stage) btnSUBMIT.getScene().getWindow();
+            primarystage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -104,7 +121,7 @@ public class Controller {
             e.printStackTrace();
         }
     }
-
+/*
     public void TestSubmit(ActionEvent event) {
         boolean a = checkA.isSelected();
         boolean b = checkB.isSelected();
@@ -124,4 +141,6 @@ public class Controller {
 
 
     }
+*/
+
 }

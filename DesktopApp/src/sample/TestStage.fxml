@@ -18,11 +18,11 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Button fx:id="btnSUBMIT" layoutX="980.0" layoutY="528.0" mnemonicParsing="false" onAction="#TestSubmit" prefHeight="31.0" prefWidth="85.0" text="SUBMIT" />
+      <Button fx:id="btnSUBMIT" disable="true" layoutX="980.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnSUBMIT" prefHeight="31.0" prefWidth="85.0" text="SUBMIT" />
       <Label fx:id="lblCHECK" layoutX="336.0" layoutY="324.0" />
       <RadioButton fx:id="radioA" layoutX="498.0" layoutY="313.0" mnemonicParsing="false" onAction="#Checkbox" text="&lt;scripting&gt;" />
-      <RadioButton fx:id="radioB" layoutX="498.0" layoutY="390.0" mnemonicParsing="false" text="&lt;js&gt;" />
-      <RadioButton fx:id="radioC" layoutX="498.0" layoutY="458.0" mnemonicParsing="false" text="&lt;javascript&gt;" />
-      <RadioButton fx:id="radioD" layoutX="498.0" layoutY="533.0" mnemonicParsing="false" text="&lt;script&gt;" />
+      <RadioButton fx:id="radioB" layoutX="498.0" layoutY="390.0" mnemonicParsing="false" onAction="#Checkbox" text="&lt;js&gt;" />
+      <RadioButton fx:id="radioC" layoutX="498.0" layoutY="458.0" mnemonicParsing="false" onAction="#Checkbox" text="&lt;javascript&gt;" />
+      <RadioButton fx:id="radioD" layoutX="498.0" layoutY="533.0" mnemonicParsing="false" onAction="#Checkbox" text="&lt;script&gt;" />
    </children>
 </Pane>
