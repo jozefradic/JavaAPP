@@ -21,11 +21,14 @@
       </div><hr>
       <div class="navigation">
         <ul class=" navbar-nav ">
+          {{#if user}}
           <li><i class="fas menuic fa-home"></i><a href="">Dashboard</a></li>
           <li><i class="fas menuic fa-user-circle"></i><a href="">User Profile</a></li>
           <li><i class="fas menuic fa-chart-bar"></i><a href="">Analitics</a></li>
           <li><i class="fas menuic fa-bell"></i><a href="">Notification</a></li>
+          {{else}}
           <li><i class="fas menuic fa-tasks"></i><a href="">Tests</a></li>
+          {{/if}}
         </ul>
 
       </div>
@@ -48,6 +51,7 @@
       </div>
 
   <div class="container">
+    <!--
       <div class="">
 
         <div class="main col-md-3">Content</div>
@@ -72,12 +76,8 @@
           <div class="main col-md-3"><p>To add form elements inside the navbar, add the .navbar-form class to a form element and add an input(s). Note that we have added a .form-group class to the div container holding the input. This adds proper padding if you have more than one inputs (you will learn more about this in the Forms chapter).</p></div>
           <div class="main col-md-3"><p>To add form elements inside the navbar, add the .navbar-form class to a form element and add an input(s). Note that we have added a .form-group class to the div container holding the input. This adds proper padding if you have more than one inputs (you will learn more about this in the Forms chapter).</p></div>
       </div>
-      </div>
-
-
-    </div>
-
-{{#if error_msg}}
+-->
+      {{#if error_msg}}
         <div class="alert alert-danger">{{error_msg}}</div>
       {{/if}}
       {{#if error}}
@@ -87,8 +87,14 @@
         {{#each errors}}
           <div class="alert alert-danger">{{msg}}</div>
         {{/each}}
-{{/if}}
+      {{/if}}
 
-{{{body}}}    
+      {{{body}}} 
+      </div>
+ 
+
+    </div>
+
+  
 </body>
 </html>

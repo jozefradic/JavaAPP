@@ -56,6 +56,7 @@ app.use((req,res,next)=>{
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
     next();
 });
 
@@ -73,11 +74,12 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname+'.../public')));
 
 //Global var for user
+/*
 app.use((req,res,next)=>{
-    res.locals.admin = req.admin || null;
+    
     next();
 });
-
+*/
 
 
 
