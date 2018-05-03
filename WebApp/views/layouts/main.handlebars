@@ -20,12 +20,15 @@
         <img class="mimg" src="/public/img/Untitled-5.png" alt="">
       </div><hr>
       <div class="navigation">
-        <ul class=" navbar-nav ">
+        <ul class="navbar-nav ">
+          {{#if user}}
           <li><i class="fas menuic fa-home"></i><a href="">Dashboard</a></li>
           <li><i class="fas menuic fa-user-circle"></i><a href="">User Profile</a></li>
           <li><i class="fas menuic fa-chart-bar"></i><a href="">Analitics</a></li>
           <li><i class="fas menuic fa-bell"></i><a href="">Notification</a></li>
+          {{else}}
           <li><i class="fas menuic fa-tasks"></i><a href="">Tests</a></li>
+          {{/if}}
         </ul>
 
       </div>
@@ -34,6 +37,7 @@
 
     <div class="content">
       <div class="top-header col-md-10">
+        
         <div class="notifications">
          <a id="title" href="">Dashboard</a>
          <a href=""><i class="far headeric fa-comment"></i></a>
@@ -45,11 +49,15 @@
          <a href="/logout">Log out</a>
          <a href="/login">Log in</a>
          </div>
+         <div class="">
+           <a href=""><i class="fas menubutton fa-align-justify"></i></a>
+         </div>
       </div>
 
   <div class="container">
+    {{#if user}}
       <div class="">
-
+        
         <div class="main col-md-3">Content</div>
         <div class="main col-md-3">Content</div>
 
@@ -72,8 +80,9 @@
           <div class="main col-md-3"><p>To add form elements inside the navbar, add the .navbar-form class to a form element and add an input(s). Note that we have added a .form-group class to the div container holding the input. This adds proper padding if you have more than one inputs (you will learn more about this in the Forms chapter).</p></div>
           <div class="main col-md-3"><p>To add form elements inside the navbar, add the .navbar-form class to a form element and add an input(s). Note that we have added a .form-group class to the div container holding the input. This adds proper padding if you have more than one inputs (you will learn more about this in the Forms chapter).</p></div>
       </div>
+      
       </div>
-
+    {{/if}}
 
     </div>
 

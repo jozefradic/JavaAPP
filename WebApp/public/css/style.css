@@ -75,6 +75,9 @@ ul>li>a:hover{
     padding-top: 25px;
 }
 
+.content{
+    position: static;
+}
 
 .notifications{
     float: left;
@@ -107,6 +110,7 @@ ul{
     background-color: #434343;
     height: 100%;
     position: fixed;
+    
 
 }
 
@@ -119,6 +123,8 @@ ul{
 
 .mimg{
     margin-top: 10px;
+    width: 200px;
+    height: 50px;
 }
 
 .main{
@@ -129,6 +135,26 @@ ul{
     margin-right: 10px;
 }
 
-@media only screen and (min-width: 768px){
-    
+.menubutton{
+    display: none;
+    color: #434343;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .top-header{
+        width: 100%;
+    }
+    .notifications,.links{
+        display: none;
+    }
+    .menubutton{
+        color: #434343;
+        display: block;
+    }
 }
